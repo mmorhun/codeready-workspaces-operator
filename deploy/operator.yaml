@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: codeready-operator
-          image: registry.redhat.io/codeready-workspaces/crw-2-rhel8-operator:latest
+          image: quay.io/crw/crw-2-rhel8-operator:latest
           ports:
             - containerPort: 60000
               name: metrics
@@ -45,11 +45,11 @@ spec:
             - name: CHE_VERSION
               value: 2.2.0
             - name: IMAGE_default_che_server
-              value: registry.redhat.io/codeready-workspaces/server-rhel8:2.2
+              value: quay.io/crw/server-rhel8:latest
             - name: IMAGE_default_plugin_registry
-              value: registry.redhat.io/codeready-workspaces/pluginregistry-rhel8:2.2
+              value: quay.io/crw/pluginregistry-rhel8:latest
             - name: IMAGE_default_devfile_registry
-              value: registry.redhat.io/codeready-workspaces/devfileregistry-rhel8:2.2
+              value: quay.io/crw/devfileregistry-rhel8:latest
             - name: IMAGE_default_che_tls_secrets_creation_job
               value: quay.io/eclipse/che-tls-secret-creator:alpine-3029769
             - name: IMAGE_default_pvc_jobs
@@ -59,11 +59,11 @@ spec:
             - name: IMAGE_default_keycloak
               value: registry.redhat.io/rh-sso-7/sso74-openshift-rhel8:7.4
             - name: IMAGE_default_che_workspace_plugin_broker_metadata
-              value: registry.redhat.io/codeready-workspaces/pluginbroker-metadata-rhel8:2.2
+              value: quay.io/crw/pluginbroker-metadata-rhel8:latest
             - name: IMAGE_default_che_workspace_plugin_broker_artifacts
-              value: registry.redhat.io/codeready-workspaces/pluginbroker-artifacts-rhel8:2.2
+              value: quay.io/crw/pluginbroker-artifacts-rhel8:latest
             - name: IMAGE_default_che_server_secure_exposer_jwt_proxy_image
-              value: registry.redhat.io/codeready-workspaces/jwtproxy-rhel8:2.2
+              value: quay.io/crw/jwtproxy-rhel8:latest
             - name: CHE_FLAVOR
               value: codeready
             - name: CONSOLE_LINK_NAME
